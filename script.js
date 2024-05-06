@@ -10,7 +10,14 @@ function search(input) {
 	var newFruit = fruit.map(function(v) {
 		return v.toLowerCase();
 	  });
-	  for(let i=0; i> )
+	  var  searchVal = newFruit.map(function(v){
+		if(input.indexOf(newFruit) !== -1){
+			results.push(searchVal);
+		}
+	  });
+	  
+
+	  
 	//   console.log(newFruit);
 		
 	return results;
