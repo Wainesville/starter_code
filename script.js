@@ -4,28 +4,26 @@ const suggestions = document.querySelector('.suggestions ul');
 
 const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackberry', 'Blackcurrant', 'Blueberry', 'Boysenberry', 'Currant', 'Cherry', 'Coconut', 'Cranberry', 'Cucumber', 'Custard apple', 'Damson', 'Date', 'Dragonfruit', 'Durian', 'Elderberry', 'Feijoa', 'Fig', 'Gooseberry', 'Grape', 'Raisin', 'Grapefruit', 'Guava', 'Honeyberry', 'Huckleberry', 'Jabuticaba', 'Jackfruit', 'Jambul', 'Juniper berry', 'Kiwifruit', 'Kumquat', 'Lemon', 'Lime', 'Loquat', 'Longan', 'Lychee', 'Mango', 'Mangosteen', 'Marionberry', 'Melon', 'Cantaloupe', 'Honeydew', 'Watermelon', 'Miracle fruit', 'Mulberry', 'Nectarine', 'Nance', 'Olive', 'Orange', 'Clementine', 'Mandarine', 'Tangerine', 'Papaya', 'Passionfruit', 'Peach', 'Pear', 'Persimmon', 'Plantain', 'Plum', 'Pineapple', 'Pomegranate', 'Pomelo', 'Quince', 'Raspberry', 'Salmonberry', 'Rambutan', 'Redcurrant', 'Salak', 'Satsuma', 'Soursop', 'Star fruit', 'Strawberry', 'Tamarillo', 'Tamarind', 'Yuzu'];
 
-function lowerCased(fruit){
-const newFruit = [];
-return fruit
-.toLowerCase()
-.filter(function(val){
-	return newFruit.indexOf(val);
-})
-
-}
-
 function search(input) {
-	let results = [];
-	var newFruit = fruit.map(function(v) {
+	var fruits = fruit.map(function(v) {
 		return v.toLowerCase();
 	  });
-for(var i=0;i<fruit.length;i++)
+	  var inputs = input.toLowerCase();
+	let results = [];
+for(var i=0;i<fruits.length;i++)
 	{
-		results.push(newFruit[i])
-	}
-	
+		fruits.forEach(function(val){
+			if(val.includes(inputs)){
+				results.push(val);
+			}
+		
+	});
+
+	// console.log("search",results)
 	return results;
 	
+	
+}
 }
 
 function searchHandler(e) {
@@ -37,7 +35,9 @@ function searchHandler(e) {
 
 
 function showSuggestions(results, inputVal) {
-console.log("test",results)
+
+	
+// console.log("test",results)
 }
 
 function useSuggestion(e) {
