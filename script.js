@@ -35,8 +35,12 @@ function searchHandler(e) {
 
 
 function showSuggestions(results, inputVal) {
-
-	
+	while(suggestions.firstChild) suggestions.removeChild(suggestions.firstChild);
+	for( let i = 0; i < results.length; i++){
+		var li = document.createElement('li');
+		li.appendChild(document.createTextNode(results[i]));
+		suggestions.appendChild(li);
+	}
 // console.log("test",results)
 }
 
