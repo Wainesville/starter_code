@@ -2,46 +2,91 @@
   box-sizing: border-box;
 }
 
-:focus {
- /* TODO */
-}
+
+#fruit:focus {
+background-color: rgba(23, 190, 126, 0.305);}
 
 body {
-  /* TODO */
-}
-
-input {
- /* TODO */
+ height: 1800px;
+  width: 1536px;
+  background: rgb(17,96,238);
+ 
 }
 
 .search-container {
- /* TODO */
+  background: linear-gradient(0deg, rgba(17,96,238,1) 0%, rgba(32,227,31,1) 99%);
+  height: 800px;
+  width:1536px ;
+  position: relative;
+  display: block;
+ border: 2px, solid, black;
+
 }
 .search-container input,
 .search-container .suggestions {
-  /* TODO */
+  display: block;
+border: 2px, solid, black;
 }
 .search-container input {
- /* TODO */
+  background: linear-gradient(0deg, rgba(17,96,238,1) 0%, rgba(32,227,31,1) 99%);
 }
 .search-container .suggestions {
-   /* TODO */
+  background: linear-gradient(0deg, rgba(17,96,238,1) 0%, rgba(32,227,31,1) 99%);
 }
 
 ul {
-  /* TODO */
+  box-sizing: content-box;
+  border: 3px, solid, black;
+  display:block;
+  position: absolute;
+  justify-content: center;
+  top:400px;
+  left: 40%;
 }
+
+#filterList{
+height: fit-content;
+border: 3px, black, solid;
+}
+
 ul.has-suggestions {
-  /* TODO */
+  width: 250px;
+  position: relative;
+display:flex;
+border: 5px, black;
 }
+
+
 ul li {
-  /* TODO */
+
+  width: 250px;
+  justify-content: center;
+  background-color: rgba(10, 76, 133, 0.082);
+font-size: 2.5rem;
+position: relative;
+display:block;
+border: 5px solid black;
 }
+
 ul li:hover {
-  /* TODO */
+color:black;
+background-color: rgba(0, 0, 255, 0.152);
 }
 
 input {
-   /* TODO */
-}
+  background-color: transparent;
+  display:block;
+  position: absolute;
+  justify-content: center;
+  top: 300px;
+  left: 40%;
+  border: 0.5rem outset rgb(0, 0, 0);
+  border-radius: 12px;
+  font: bold 1rem sans-serif;
+  margin: 2rem;
+  padding: 1rem;
+  outline-offset: 0.5rem;
+  background-color: transparent;
+
+  }
 

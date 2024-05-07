@@ -45,10 +45,10 @@ function showSuggestions(results, inputVal) {
 }
 
 function useSuggestion(e) {
-	e.document.addEventListener("click", function (e) {
-		closeAllLists(e.target);
-	});
-	}
+	let item = e.currentTarget.value;
+	let freshArray = [];
+	showSuggestions(freshArray,item);
+}
 
 
 input.addEventListener('keyup', searchHandler);

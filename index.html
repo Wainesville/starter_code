@@ -6,14 +6,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+
 <form autocomplete="off">
-<div class="search-container">
+
+<div class="search-container"> 
 	<input type="text" list="myList" name="fruit" keyup="search()" placeholder="Search fruit 🍎" id="fruit" >
 	<div class="suggestions">
-		<ul></ul>
+		<ul id="filterList"></ul>
 	</div>
 </div>
+
 </form>
   <script  src="./script.js"></script>
 </body>
