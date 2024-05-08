@@ -4,7 +4,7 @@
 
 
 #fruit:focus {
-background-color: rgba(23, 190, 126, 0.305);}
+background: rgba(23, 190, 126, 0.305);}
 
 body {
  height: 1800px;
@@ -19,13 +19,11 @@ body {
   width:1536px ;
   position: relative;
   display: block;
- border: 2px, solid, black;
 
 }
 .search-container input,
 .search-container .suggestions {
   display: block;
-border: 2px, solid, black;
 }
 .search-container input {
   background: linear-gradient(0deg, rgba(17,96,238,1) 0%, rgba(32,227,31,1) 99%);
@@ -36,7 +34,7 @@ border: 2px, solid, black;
 
 ul {
   box-sizing: content-box;
-  border: 3px, solid, black;
+  /* border: 3px solid black; */
   display:block;
   position: absolute;
   justify-content: center;
@@ -46,14 +44,14 @@ ul {
 
 #filterList{
 height: fit-content;
-border: 3px, black, solid;
+/* border: 3px black solid; */
 }
 
 ul.has-suggestions {
   width: 250px;
   position: relative;
 display:flex;
-border: 5px, black;
+border: 5px black;
 }
 
 
@@ -61,11 +59,11 @@ ul li {
 
   width: 250px;
   justify-content: center;
-  background-color: rgba(10, 76, 133, 0.082);
+  background-color: rgba(227, 233, 239, 0.936);
 font-size: 2.5rem;
 position: relative;
 display:block;
-border: 5px solid black;
+/* border-bottom: 2px solid black; */
 }
 
 ul li:hover {
