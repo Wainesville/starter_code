@@ -14,12 +14,11 @@ for(var i=0;i<fruits.length;i++)
 	{
 		fruits.forEach(function(val){
 			if(val.includes(inputs)){
+				val.charAt(0).toUpperCase()+val.slice(1);
 				results.push(val);
 			}
 		
 	});
-
-	// console.log("search",results)
 	return results;
 	
 	
@@ -38,15 +37,17 @@ function showSuggestions(results, inputVal) {
 	while(suggestions.firstChild) suggestions.removeChild(suggestions.firstChild);
 	for( let i = 0; i < results.length; i++){
 		var li = document.createElement('li');
+		// var hr = document.createElement('hr');
 		li.appendChild(document.createTextNode(results[i]));
 		suggestions.appendChild(li);
+		// suggestions.appendChild(hr);
 	}
-// console.log("test",results)
 }
 
 function useSuggestion(e) {
 	let item = e.currentTarget.value;
 	let freshArray = [];
+	input = item;
 	showSuggestions(freshArray,item);
 }
 
