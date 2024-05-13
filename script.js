@@ -8,8 +8,8 @@ function search(input) {
 	var fruits = fruit.map(function(v) {
 		return v.toLowerCase();
 	  });
-	  var inputs = input.toLowerCase();
-	let results = [];
+	var inputs = input.toLowerCase();
+			let results = [];
 for(var i=0;i<fruits.length;i++)
 	{
 		fruits.forEach(function(val){
@@ -18,12 +18,12 @@ for(var i=0;i<fruits.length;i++)
 				results.push(trueVal);
 			}
 		
-	});
-	return results;
-	
-	
+		});
+		return results;	
+	}
 }
-}
+
+// 
 
 function searchHandler(e) {
     let item = e.currentTarget.value;
