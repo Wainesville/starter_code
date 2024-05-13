@@ -23,7 +23,7 @@ for(var i=0;i<fruits.length;i++)
 	}
 }
 
-// 
+// search function set to convert both input and array toLowerCase, convert value back to uppercase if selected for search array
 
 function searchHandler(e) {
     let item = e.currentTarget.value;
@@ -31,6 +31,8 @@ function searchHandler(e) {
 	resArray = search(item);
 	showSuggestions(resArray,item);
 }
+
+// putting together the array of of return values from the search function.
 
 
 function showSuggestions(results, inputVal) {
@@ -42,12 +44,15 @@ function showSuggestions(results, inputVal) {
 	}
 }
 
+// takes the array and uses it to replace whatever was there previously and cerate's a lits that the user can hover over and selct.
+
 function useSuggestion(e) {
 	let item = e.target.innerHTML;
 	input.value = item;
 	console.log(item);
 }
 
+// once clicked item is placed in search form and list is cleared.
 
 input.addEventListener('keyup', searchHandler);
 suggestions.addEventListener('click', useSuggestion);
